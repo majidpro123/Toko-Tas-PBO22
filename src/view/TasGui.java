@@ -35,7 +35,7 @@ public class TasGui {
         Buku.setSize(900,700);
         Buku.setLayout(null);
         Buku.getContentPane().setBackground(Color.LIGHT_GRAY);
-        top = new JLabel("DATA BUKU");
+        top = new JLabel("DATA TAS");
         top.setBounds(130,10,600,50);
         top.setFont(new Font("Times New Roman", Font.BOLD,40));
         Buku.add(top);
@@ -44,7 +44,7 @@ public class TasGui {
         tabelbuku.setModel(buku_c.listbuku());
         Buku.add(scrolbuku);
         
-        labelkodebuku = new JLabel("KODE BUKU");
+        labelkodebuku = new JLabel("MERK");
         labelkodebuku.setBounds(30,150,100,30);
         Buku.add(labelkodebuku);
         
@@ -52,7 +52,7 @@ public class TasGui {
         textkodebuku.setBounds(30,180,200,30);
         Buku.add(textkodebuku);
                 
-        labeljudul = new JLabel("JUDUL BUKU");
+        labeljudul = new JLabel("WARNA");
         labeljudul.setBounds(30,210,100,30);
         Buku.add(labeljudul);
         
@@ -60,7 +60,7 @@ public class TasGui {
         textjudul.setBounds(30,240,200,30);
         Buku.add(textjudul);
         
-        labelpengarang = new JLabel("PENGARANG");
+        labelpengarang = new JLabel("MODEL");
         labelpengarang.setBounds(30,270,100,30);
         Buku.add(labelpengarang);
         
@@ -68,7 +68,7 @@ public class TasGui {
         textpengarang.setBounds(30,300,200,30);
         Buku.add(textpengarang);
         
-        labeltahun = new JLabel("TAHUN TERBIT");
+        labeltahun = new JLabel("HARGA");
         labeltahun.setBounds(30,330,200,30);
         Buku.add(labeltahun);
         
@@ -84,15 +84,15 @@ public class TasGui {
         textjumlah.setBounds(30,420,200,30);
         Buku.add(textjumlah);
         
-        btntambahbuku = new JButton("Tambah Buku");
+        btntambahbuku = new JButton("Tambah");
         btntambahbuku.setBounds(50,470,150,30);
         Buku.add(btntambahbuku);
         
-        btnubahbuku = new JButton("Ubah Buku");
+        btnubahbuku = new JButton("Ubah");
         btnubahbuku.setBounds(50,510,150,30);
         Buku.add(btnubahbuku);
         
-        btnhapus = new JButton("Hapus Buku");
+        btnhapus = new JButton("Hapus");
         btnhapus.setBounds(50,550,150,30);
         Buku.add(btnhapus);              
                
@@ -123,7 +123,7 @@ public class TasGui {
                     int tahun = Integer.valueOf(texttahun.getText());
                     int jumlah = Integer.valueOf(textjumlah.getText());
                     ViewCon.buku.insert(kodebuku,judul,pengarang,tahun,jumlah);
-                    JOptionPane.showMessageDialog(null,"Input Buku Sukses","Information", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null,"Input Sukses","Information", JOptionPane.INFORMATION_MESSAGE);
                     reset();
                     tabelbuku.setModel(ViewCon.buku.listbuku());
                 }catch(Exception exception){
@@ -142,7 +142,7 @@ public class TasGui {
                     int tahun = Integer.valueOf(texttahun.getText());
                     int jumlah = Integer.valueOf(textjumlah.getText());
                     ViewCon.buku.update(index,kodebuku,judul,pengarang,tahun,jumlah);
-                    JOptionPane.showMessageDialog(null,"Ubah Buku Sukses","Information", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null,"Ubah Sukses","Information", JOptionPane.INFORMATION_MESSAGE);
                     reset();
                     tabelbuku.setModel(ViewCon.buku.listbuku());
                 }catch(Exception exception){
@@ -169,7 +169,7 @@ public class TasGui {
                 try{
                     
                     ViewCon.buku.delete(index);
-                    JOptionPane.showMessageDialog(null,"Hapus Buku Sukses","Information", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null,"Hapus Sukses","Information", JOptionPane.INFORMATION_MESSAGE);
                     tabelbuku.setModel(ViewCon.buku.listbuku());
                     reset();
                 }catch(Exception exception){

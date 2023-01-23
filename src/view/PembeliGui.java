@@ -34,7 +34,7 @@ public class PembeliGui {
         Anggota.setSize(900,700);
         Anggota.setLayout(null);
         Anggota.getContentPane().setBackground(Color.LIGHT_GRAY);
-        top = new JLabel("DATA ANGGOTA");
+        top = new JLabel("DATA PEMBELI");
         top.setBounds(130,10,600,50);
         top.setFont(new Font("Times New Roman", Font.BOLD,40));
         Anggota.add(top);
@@ -44,7 +44,7 @@ public class PembeliGui {
         tabelanggota.setModel(anggota_c.listanggota());
         Anggota.add(scrolanggota);
         
-        labelid = new JLabel("ID Anggota");
+        labelid = new JLabel("ID Pembeli");
         labelid.setBounds(30,150,100,30);
         Anggota.add(labelid);
         
@@ -76,11 +76,11 @@ public class PembeliGui {
         textnotelp.setBounds(30,360,200,30);
         Anggota.add(textnotelp);
         
-        btntambahanggota = new JButton("Tambah Anggota");
+        btntambahanggota = new JButton("Tambah");
         btntambahanggota.setBounds(30,420,200,30);
         Anggota.add(btntambahanggota);
         
-        btnhapus = new JButton("Hapus Anggota");
+        btnhapus = new JButton("Hapus");
         btnhapus.setBounds(50,460,150,30);
         Anggota.add(btnhapus);
                                
@@ -110,7 +110,7 @@ public class PembeliGui {
                       String no = textnotelp.getText();
                       ViewCon.anggota.insert(nama, id, no, alamat);
                       tabelanggota.setModel(ViewCon.anggota.listanggota());
-                      JOptionPane.showMessageDialog(null,"Input Anggota Sukses","Information", JOptionPane.INFORMATION_MESSAGE);
+                      JOptionPane.showMessageDialog(null,"Input Sukses","Information", JOptionPane.INFORMATION_MESSAGE);
                     reset();
                   }catch(Exception exception){
                   JOptionPane.showMessageDialog(null,"Fomat penulisan salah","Information", JOptionPane.INFORMATION_MESSAGE);
@@ -135,7 +135,7 @@ public class PembeliGui {
                 try{
                     
                     ViewCon.anggota.delete(index);
-                    JOptionPane.showMessageDialog(null,"Hapus Anggota Sukses","Information", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null,"Hapus Sukses","Information", JOptionPane.INFORMATION_MESSAGE);
                     tabelanggota.setModel(ViewCon.anggota.listanggota());
                     reset();
                 }catch(Exception exception){

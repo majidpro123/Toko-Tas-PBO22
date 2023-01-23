@@ -33,28 +33,22 @@ public class PegawaiGui {
         top.setFont(new Font("Times New Roman", Font.BOLD,40));
         LogReg.add(top);
          
-        btnbuku = new JButton("Data Buku");
+        btnbuku = new JButton("Data Tas");
         btnbuku.setBounds(270,150,300,50);
         btnbuku.setBackground(Color.CYAN);
         LogReg.add(btnbuku);
         
         //====== ANGGOTA =========        
-        btnanggota = new JButton("Data Anggota");
+        btnanggota = new JButton("Data Pembeli");
         btnanggota.setBounds(270,250,300,50);
         btnanggota.setBackground(Color.CYAN);
         LogReg.add(btnanggota);
         
         //====== PEMINJAM =========
-        btnpeminjaman = new JButton("Data Peminjaman");
+        btnpeminjaman = new JButton("Data Transaksi");
         btnpeminjaman.setBounds(270,350,300,50);
         btnpeminjaman.setBackground(Color.CYAN);
         LogReg.add(btnpeminjaman);
-        
-        //====== PENGEMBALIAN =======
-        btnpengembalian = new JButton("Data Pengembalian");
-        btnpengembalian.setBounds(270,450,300,50);
-        btnpengembalian.setBackground(Color.CYAN);
-        LogReg.add(btnpengembalian);
         
         //===== EXIT =====
         btnback = new JButton("EXIT");

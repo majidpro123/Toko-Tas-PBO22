@@ -38,10 +38,10 @@ public class PegawaiControler {
     }
     
      public void dataPetugas(){
-        String no_id [] = {"001","002","003"};
-        String nama [] = {"Dian","Indah","Kumala"};
-        String alamat [] = {"Kediri","Sidoarjo","Surabaya"};
-        String password [] = {"001","002","003"};
+        String no_id [] = {"001","002"};
+        String nama [] = {"majid","saiful"};
+        String alamat [] = {"Kediri","Sidoarjo"};
+        String password [] = {"001","002"};
        
         for(int i = 0; i<nama.length; i++){
         petugas_m.insert(new PegawaiEntity(nama[i],no_id[i],alamat[i],password[i]));

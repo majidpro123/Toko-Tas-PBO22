@@ -37,7 +37,7 @@ public class TransaksiGui {
         Peminjaman.setSize(900,700);
         Peminjaman.setLayout(null);
         Peminjaman.getContentPane().setBackground(Color.LIGHT_GRAY);
-        top = new JLabel("DATA PEMINJAMAN");
+        top = new JLabel("DATA TRANSAKSI");
         top.setBounds(130,10,600,50);
         top.setFont(new Font("Times New Roman", Font.BOLD,40));
         Peminjaman.add(top);
@@ -46,7 +46,7 @@ public class TransaksiGui {
         tabelpeminjaman.setModel(peminjaman_c.listpinjaman());
         Peminjaman.add(scrolpeminjaman);
         
-        labelidpeminjam = new JLabel("no pinjam");
+        labelidpeminjam = new JLabel("no beli");
         labelidpeminjam.setBounds(100,380,100,30);
         Peminjaman.add(labelidpeminjam);
         
@@ -94,7 +94,7 @@ public class TransaksiGui {
         textstatus.setBounds(350,530,200,30);
         Peminjaman.add(textstatus);
         
-        btntambahdata = new JButton("Tambah Anggota");
+        btntambahdata = new JButton("Tambah");
         btntambahdata.setBounds(600,410,200,30);
         Peminjaman.add(btntambahdata);
         

@@ -29,12 +29,12 @@ public class LogIn {
         LogReg.setSize(900,700);
         LogReg.setLayout(null);
         LogReg.getContentPane().setBackground(Color.LIGHT_GRAY);
-        top = new JLabel("SI PERPUSTAKAAN");
+        top = new JLabel("TOKO TAS JOYO");
         top.setBounds(130,10,600,50);
         top.setFont(new Font("Times New Roman", Font.BOLD,40));
         LogReg.add(top);
         
-        idLogin = new JLabel("ID PETUGAS");
+        idLogin = new JLabel("ID PEGAWAI");
         idLogin.setBounds(250,180,100,30);
         LogReg.add(idLogin);
         
@@ -66,12 +66,12 @@ public class LogIn {
                     ViewCon.petugas.dataPetugas();
                     ViewCon.petugas.cekPetugas(textidlogin.getText(),passwordlogin.getText());
                     String nama = ViewCon.petugas.petugasEntity().getNama();
-                     JOptionPane.showMessageDialog(null,"Selamat Datang "+nama+" Di perpustakaan!","information",JOptionPane.INFORMATION_MESSAGE);
+                     JOptionPane.showMessageDialog(null,"Selamat Datang "+nama+" Di toko tas!","information",JOptionPane.INFORMATION_MESSAGE);
                         PegawaiGui petugas = new PegawaiGui();
                     LogReg.dispose();
                 }
                 catch(Exception exception){
-                    JOptionPane.showMessageDialog(null,"NPM atau password salah","information",JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null,"ID atau password salah","information",JOptionPane.INFORMATION_MESSAGE);
                     reset();
                 }
              }
